@@ -1,0 +1,189 @@
+/* CV Max Rufener – style.css (External Stylesheet) */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background-color: #d6d6d6;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+/* MAIN CONTAINER */
+.cv-page {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border: 1px solid #bbbbbb;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    padding: 40px;
+}
+
+/* HEADER */
+.cv-header {
+    margin-bottom: 20px;
+}
+
+.cv-title {
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 3px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.cv-divider {
+    border: none;
+    border-top: 2px solid #111111;
+    margin-bottom: 20px;
+}
+
+/* SECTIONS */
+.cv-section {
+    margin-bottom: 24px;
+}
+
+.cv-section__title {
+    background-color: #eeeeee;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 6px 8px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #cccccc;
+}
+
+/* PERSONAL STUFF */
+.cv-personalien {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.cv-personalien__text {
+    flex: 1;
+}
+
+.cv-personalien__foto {
+    flex-shrink: 0;
+}
+
+.cv-personalien__foto img {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    border: 1px solid #888888;
+    display: block;
+}
+
+/* DEFINITION LISTS */
+.cv-dl {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 4px 10px;
+    padding: 4px 0;
+}
+
+.cv-dl dt {
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.cv-dl dd {
+    color: #333333;
+}
+
+/* LISTS (ul) */
+.cv-list {
+    list-style: none;
+    padding: 0;
+}
+
+.cv-list__item {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 6px 8px;
+    border-bottom: 1px dotted #dddddd;
+}
+
+.cv-list__item:last-child {
+    border-bottom: none;
+}
+
+.cv-list__item:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* DATE */
+.cv-list__date {
+    min-width: 190px;
+    width: 190px;
+    color: #444444;
+    font-style: normal;
+    flex-shrink: 0;
+}
+
+/* TOPIC */
+.cv-list__detail {
+    flex: 1;
+}
+
+.cv-list__detail strong {
+    display: block;
+    font-weight: bold;
+}
+
+.cv-list__detail span,
+.cv-list__detail em {
+    display: block;
+    color: #555555;
+    font-size: 13px;
+}
+
+.cv-list__detail em {
+    font-style: italic;
+}
+
+/* RESPONSIVE: MOBILE */
+@media (max-width: 600px) {
+
+    .cv-page {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .cv-personalien {
+        flex-direction: column;
+    }
+
+    .cv-personalien__foto img {
+        width: 100px;
+        height: 133px;
+    }
+
+    .cv-list__item {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .cv-list__date {
+        width: 100%;
+        font-size: 12px;
+        color: #777777;
+    }
+
+    .cv-dl {
+        grid-template-columns: 120px 1fr;
+    }
+}
